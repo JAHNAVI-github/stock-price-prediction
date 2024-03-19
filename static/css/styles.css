@@ -1,0 +1,139 @@
+
+
+
+
+.today-stock {
+  background-color: #4981ba; /* Set a light background color */
+  padding: 20px; /* Add padding for better spacing */
+  border-radius: 10px; /* Add border-radius for rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
+}
+
+.title {
+  margin-bottom: 20px; /* Add margin for spacing between title and stock-chart */
+}
+
+h3.text-primary {
+  color: #007bff; /* Set text color to primary color */
+}
+
+.stock-chart {
+  text-align: center; /* Center-align the content within stock-chart */
+}
+
+h4 {
+  color: #343a40; /* Set text color to a dark color */
+}
+
+img {
+  max-width: 100%; /* Make sure the image does not exceed its container */
+  border-radius: 5px; /* Add a slight border-radius to the image */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for the image */
+}
+.row {
+  display: flex;
+  justify-content: space-between; /* Add space between columns */
+}
+
+.col-md-2 {
+  flex: 1; /* Distribute available space evenly among columns */
+  margin: 0 5px; /* Add margin for spacing between columns */
+}
+
+.media-body {
+  background-color: #007bff; /* Set background color */
+  padding: 15px; /* Add padding for better spacing */
+  border-radius: 8px; /* Add border-radius for rounded corners */
+  text-align: center; /* Center-align text */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+}
+
+h2, p {
+  color: #fff; /* Set text color to white */
+  margin: 5px 0; /* Add margin for spacing within the media-body */
+}
+.prediction-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Add gap between cards */
+  justify-content: center; /* Center-align cards */
+}
+
+.col-lg-6 {
+  flex: 1; /* Distribute available space evenly among columns */
+  max-width: calc(50% - 20px); /* Set max-width for each column */
+}
+
+.card {
+  background-color: #fff; /* Set card background color */
+  border-radius: 8px; /* Add border-radius for rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+}
+
+.card-title {
+  background-color: #007bff; /* Set title background color */
+  padding: 15px; /* Add padding for better spacing */
+  border-top-left-radius: 8px; /* Adjust border-radius for title */
+  border-top-right-radius: 8px;
+  text-align: center; /* Center-align text */
+}
+
+h4 {
+  color: #fff; /* Set text color to white */
+  margin: 0; /* Remove margin for cleaner appearance */
+}
+
+.team-chart img {
+  width: 100%; /* Make sure the image does not exceed its container */
+  border-bottom-left-radius: 8px; /* Adjust border-radius for image */
+  border-bottom-right-radius: 8px;
+}
+.prediction {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center-align cards */
+}
+
+.col-md-4 {
+  flex: 1; /* Distribute available space evenly among columns */
+  max-width: calc(33.33% - 20px); /* Set max-width for each column */
+  margin: 0 10px; /* Add margin for spacing between columns */
+}
+
+.media-body {
+  background-color: #343a40; /* Set background color */
+  padding: 15px; /* Add padding for better spacing */
+  border-radius: 8px; /* Add border-radius for rounded corners */
+  text-align: center; /* Center-align text */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+}
+
+p.m-b-0 {
+  color: #fff; /* Set text color to white */
+  margin-bottom: 5px; /* Add margin for spacing */
+}
+
+h2.color-white,
+h3.color-white {
+  color: #fff; /* Set text color to white */
+  margin: 5px 0; /* Add margin for spacing */
+}
+body{
+  background-color: gray;
+}
+
+/* Styling for header */
+header {
+  border-bottom: 1px solid #ddd;
+}
+
+nav ul li a {
+  color: #0d6efd;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+

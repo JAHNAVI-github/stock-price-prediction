@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Stock price prediction using deep learning</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  
+    <link href="{{url_for('static',filename = 'css/styles.css')}}" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="zz.css"> -->
+
+</head>
+
+<body>
+    <!-- <script src="https://www.macroaxis.com/widgets/url.jsp?t=42"></script><div class="macroaxis-copyright"></div> -->
+
+  <header id="header" class="fixed-top ">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo me-auto"><a href="index">Stock Price Prediction using Deep Learning and Machine Learning Methods</a></h1>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="" href="login">Logout</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+    <div class="today-stock">
+        <div class="title">
+            <h3 class="text-primary">TODAY'S {{quote}} STOCK DATA</h3>
+        </div>
+        <div class="stock-chart">
+            <h4>RECENT TRENDS IN {{quote}} STOCK PRICES</h4>
+            <img src="{{url_for('static', filename='Trends.png')}}" />
+        </div>
+    </div>
+
+    <div class="row">
+
+        <div class="col-md-2">
+            <div class="media-body media-text-right">
+                <h2 class="color-white text-white">{{open_s}}</h2>
+                <p class="m-b-0 text-white">OPEN</p>
+            </div>
+        </div>
+        
+        <div class="col-md-2">
+            <div class="media-body media-text-right">
+                <h2 class="color-white text-white">{{high_s}}</h2>
+                <p class="m-b-0 text-white">HIGH</p>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="media-body media-text-right">
+                <h2 class="color-white text-white">{{low_s}}</h2>
+                <p class="m-b-0 text-white">LOW</p>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="media-body media-text-right">
+                <h2 class="color-white text-white">{{close_s}}</h2>
+                <p class="m-b-0 text-white">CLOSE</p>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="media-body media-text-right">
+                <h2 class="color-white text-white">{{adj_close}}</h2>
+                <p class="m-b-0 text-white">ADJ CLOSE</p>
+            </div>
+        </div>
+
+
+
+        <div class="col-md-2">
+            <div class="media-body media-text-right">
+                <h2 class="color-white text-white">{{vol}}</h2><br>
+                <p class="m-b-0 text-white">VOLUME</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="prediction-images">
+        
+        
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-title">
+                    <h4>Multi Layer Perceptron MODEL ACCURACY</h4>
+                </div>
+                <div class="sales-chart">
+                    <img src="{{url_for('static', filename='MLP.png')}}" />
+                </div>
+            </div>
+        </div>
+        <!-- /# column -->
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-title">
+                    <h4>LSTM MODEL ACCURACY</h4>
+                </div>
+                <div class="team-chart">
+                    <img src="{{url_for('static', filename='LSTM.png')}}" />
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-title">
+                    <h4>GRU MODEL ACCURACY</h4>
+                </div>
+                <div class="team-chart">
+                    <img src="{{url_for('static', filename='GRU.png')}}" />
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-title">
+                    <h4>BiLSTM MODEL ACCURACY</h4>
+                </div>
+                <div class="team-chart">
+                    <img src="{{url_for('static', filename='BILSTM.png')}}" />
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-title">
+                    <h4>CNN MODEL ACCURACY</h4>
+                </div>
+                <div class="team-chart">
+                    <img src="{{url_for('static', filename='CNN.png')}}" />
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="card">
+              <div class="card-title">
+                  <h4>Stacking MODEL ACCURACY</h4>
+              </div>
+              <div class="team-chart">
+                  <img src="{{url_for('static', filename='stacking.png')}}" />
+              </div>
+          </div>
+        </div>
+
+      <div class="col-lg-6">
+          <div class="card">
+              <div class="card-title">
+                  <h4>Voting MODEL ACCURACY</h4>
+              </div>
+              <div class="team-chart">
+                  <img src="{{url_for('static', filename='voting.png')}}" />
+              </div>
+          </div>
+      </div>
+    </div>
+
+
+    <div class="prediction">
+        <!-- MLP -->
+
+        <div class="col-md-4">
+            <div class="media-body media-text-right">
+                <h2 class="m-b-0 text-white">MLP Prediction: {{linear_pred}}</h2>
+                <p class="color-white text-white">RMSE: {{error_linear}}</p>
+                <p class="color-white text-white">MSE: {{mse_mlp}}</p>
+                <p class="color-white text-white">MAE: {{mae_mlp}}</p>
+
+
+  
+            </div>
+          </div>
+       
+
+        <!-- CNN -->
+
+        <div class="col-md-4">
+          <div class="media-body media-text-right">
+            <h2>CNN</h2>
+            <h3 class="color-white text-white">CNN Prediction: {{cnn_pred}}</h3>
+            <p class="m-b-0 text-white">RMSE: {{cnn_error}}</p>
+            <p class="m-b-0 text-white">MSE: {{cnn_mse}}</p>
+            <p class="m-b-0 text-white">MAE: {{cnn_mae}}</p>
+
+
+          </div>
+        </div>
+        
+        <!-- LSTM  -->
+        <div class="col-md-4">
+          <div class="media-body media-text-right">
+            <h2>LSTM</h2>
+            <h3 class="color-white text-white">LSTM Prediction: {{lstm_pred}}</h3>
+            <p class="m-b-0 text-white">RMSE: {{error_lstm}}</p>
+            <p class="m-b-0 text-white">MSE: {{mse_lstm}}</p>
+            <p class="m-b-0 text-white">MAE: {{mae_lstm}}</p>
+
+          </div>
+        </div>
+        <!-- GRU  -->
+        <div class="col-md-4">
+          <div class="media-body media-text-right">
+              <h2>GRU</h2>
+              <h3 class="color-white text-white">GRU Prediction: {{gru_pred}}</h3>
+              <p class="color-white text-white">RMSE: {{error_gru}}</p>
+              <p class="color-white text-white">MSE: {{g_mse}}</p>
+              <p class="color-white text-white">MAE: {{g_mae}}</p>
+
+          </div>
+        </div>
+        <!-- Bi-LSTM PRED -->
+
+        <div class="col-md-4">
+          <div class="media-body media-text-right">
+              <h2>Bi-LSTM</h2>
+              <h3 class="color-white text-white">Bi-LSTM Prediction: {{bilstm_pred}}</h3>
+              <p class="color-white text-white">RMSE: {{error_bilstm}}</p>
+              <p class="color-white text-white">MAE: {{bilstm_mae}}</p>
+              <p class="color-white text-white">MSE: {{bilstm_mse}}</p>
+
+
+          </div>
+        </div>
+        
+        <!-- stacking  -->
+        <div class="col-md-4">
+          <div class="media-body media-text-right">
+              <h2>Stacking Classifier</h2>
+              <h3 class="color-white text-white">STACKING Prediction: {{s_pred}}</h3>
+              <p class="m-b-0 text-white">RMSE: {{s_error}} </p>
+              <p class="m-b-0 text-white">MSE: {{s_mse}} </p>
+              <p class="m-b-0 text-white">MAE: {{s_mae}} </p>
+
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="media-body media-text-right">
+              <h2>Voting Classifier</h2>
+              <h3 class="color-white text-white">VOTING Prediction: {{v_pred}}</h3>
+              <p class="m-b-0 text-white">RMSE: {{v_error}}</p>
+              <p class="m-b-0 text-white">MSE: {{v_mse}}</p>
+              <p class="m-b-0 text-white">MAE: {{v_mae}}</p>
+
+
+            </div>
+        </div>
+    </div>
+                    
+ 
+
+  
+</body>
+
+</html>

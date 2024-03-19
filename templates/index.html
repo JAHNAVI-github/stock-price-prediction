@@ -1,0 +1,124 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Stock market prediction using deep learning</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <link rel="stylesheet" href="../static/css/index.css">
+
+</head>
+
+<body>
+
+  <header id="header" class="fixed-top ">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo me-auto"><a href="">Stock market prediction using deep learning</a></h1>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="login">logout</a></li>
+          
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+
+    </div>
+  </header>
+
+
+  </section>
+<div class="login_page login_solid_bg">
+  <div class="container">
+    <div class="log_in_logo text-center"> <img style="height: 250px" src="https://png.pngtree.com/png-vector/20200729/ourlarge/pngtree-stock-market-fluctuation-graph-png-image_2315331.jpg"></div>
+    <div class="log_in_box">
+      <form class="login" action = "/predict" method = "POST">
+        <div class="login_title">
+          <h2>PLEASE ENTER A Stock SYMBOL</h2>
+          {% if not_found %}
+          <div class="alert alert-danger" style="color: red;" role="alert">
+    Stock Symbol (Ticker) Not Found. Please Enter a Valid Ticker Symbol
+</div>
+          {% endif %}
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" name = "nm" placeholder="Company Ticker Symbol">
+
+        </div>
+        <div class="form-group">
+          
+        </div>
+        <div class="form-group">
+          <button class="btn btn-login">GO</button>
+        </div>
+        
+      </form>
+    </div>
+  </div>
+</div>
+
+
+  <main id="main">
+
+  
+    
+</body>
+
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Stock market prediction using deep learning</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
+    <link rel="stylesheet" href="../static/css/index.css" />
+  </head>
+  <body>
+    <header class="fixed-top">
+      <div class="header-bar">
+        <nav id="navbar" class="navbar">
+          <ul class="header-items">
+            <li ><a class="heading-btn" href="index">Stock market prediction using deep learning and Machine Learning Methods</a></li>
+            <li><a class="logout-btn" href="login">Logout</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    
+    
+
+    <div class="login_page">
+      <div class="container">
+        <form class="login" action="/predict" method="POST">
+          <div class="login_title">
+            <h2>PLEASE ENTER A STOCK SYMBOL</h2>
+            {% if not_found %}
+            <div class="alert alert-danger" role="alert">
+              Stock Symbol (Ticker) Not Found. Please Enter a Valid Ticker
+              Symbol
+            </div>
+            {% endif %}
+          </div>
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              name="nm"
+              placeholder="Company Ticker Symbol"
+            />
+          </div>
+          <div class="login-btn">
+            <button class="btn">GO</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
